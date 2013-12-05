@@ -1,0 +1,10 @@
+extends layout
+
+block scripts
+
+block content
+    h1(class='text-center') #{title}
+    div(class='well text-center') There has been an error communicating with our server. Please try again later.
+        div(class='text-center') Here is a cute kitten while you wait:
+        div
+            image(src=url, class='img-rounded', id='kitten')
