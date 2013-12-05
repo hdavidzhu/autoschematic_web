@@ -8,10 +8,12 @@ exports.index = function(req, res){
 };
 
 exports.upload = function(req, res){
-    try{
+    var url = 'http://autoschematic.ngrok.com/upload'
+    request(url, function(err, resp, body){
+        if (err){
+            res.render('upload', { title: 'Sorry' });
+        }
+        console.log(body)
         res.redirect('http://autoschematic.ngrok.com/upload')
-    }
-    catch(err){
-    res.render('upload', { title: 'Sorry' });
-    }
+    });
 };
