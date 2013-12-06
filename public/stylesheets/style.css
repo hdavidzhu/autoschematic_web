@@ -1,5 +1,5 @@
 body {
-    padding: 40 0px;
+    padding: 2 0%;
     font: 18px 'Raleway', "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -27,11 +27,12 @@ img {
     width: 60%;
     margin: auto;
     margin-top: 5%;
+    min-width: 360px;
     /*padding: 0;*/
 }
 
 .design_process {
-
+    position: inline-block;
 }
 
 .software {
@@ -39,6 +40,43 @@ img {
 }
 
 .mechanical {
+
+}
+
+.design_header {
+    background-color: red;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    font-size: 150%;
+}
+
+.design_text {
+    flex: 6;
+    order: 0;
+    /*padding: 10%;*/
+    padding: 100 0px;
+}
+
+.software_button {
+    flex: 2;
+    order: 1;
+    float: right;
+    /*padding: 10%;*/
+    background-color: blue;
+    text-align: center;
+    padding: 100 0px;
+
+}
+
+.mechanical_button {
+    flex: 2;
+    order: 2;
+    float: right;
+    /*padding: 10%;*/
+    background-color: yellow;
+    text-align: center;
+    padding: 100 0px;
 
 }
 
