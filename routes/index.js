@@ -12,10 +12,10 @@ exports.upload = function(req, res){
     var url = 'http://autoschematic.ngrok.com/upload'
     request(url, function(err, resp, body){
         if (err || body.match(/tunnel/i)){
-            res.render('upload', { title: 'Sorry' });
+            res.render('upload', { title: 'Sorry', url:'http://placekitten.com/'+(Math.floor(Math.random()*(401)+200)+'/'+(Math.floor(Math.random()*(401)+200) });
         }
-        console.log(body);
-        console.log(typeof(body));
-        res.redirect('http://autoschematic.ngrok.com/upload');
+        else{
+            res.redirect('http://autoschematic.ngrok.com/upload');
+        }
     });
 };
