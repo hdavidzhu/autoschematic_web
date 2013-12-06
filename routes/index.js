@@ -11,7 +11,7 @@ exports.index = function(req, res){
 exports.upload = function(req, res){
     var url = 'http://autoschematic.ngrok.com/upload'
     request(url, function(err, resp, body){
-        if (err || body='Tunnel autoschematic.ngrok.com not found'){
+        if (err || body=='Tunnel autoschematic.ngrok.com not found'){
             res.render('upload', { title: 'Sorry' });
         }
         res.redirect('http://autoschematic.ngrok.com/upload')
