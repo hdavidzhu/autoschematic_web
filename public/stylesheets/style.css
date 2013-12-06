@@ -1,10 +1,10 @@
 body {
-  padding: 40px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 40 0px;
+    font: 18px 'Raleway', "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 .form-control-inline {
@@ -22,3 +22,36 @@ img {
 #logo {
   width: 600px;
 }
+
+.body {
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    /*padding: 0;*/
+}
+
+.design_process {
+
+}
+
+.software {
+
+}
+
+.mechanical {
+
+}
+
+.well {
+}
+
+/*@media only screen and (min-width: 768px) {}*/
+
+@media only screen and (max-width: 767px) {
+    .body {
+        width: 95%;
+        margin-top: 7%;
+    }
+}
+
+/*@media only screen and (max-width: 767px) and (orientation: portrait) {}*/
