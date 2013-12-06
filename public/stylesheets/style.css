@@ -11,6 +11,17 @@ a {
     width: 100%
 }
 
+.nav-logo {
+  height: 0px;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-fixed-top {
+  border: 0px
+}
+
 nav {
     font-size: 16px;
 }
