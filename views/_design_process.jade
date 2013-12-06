@@ -1,27 +1,39 @@
-div.well#1014
-    p Our team was given the initial inspiration to create a “breadboard maker.” We aimed to produce a device that eases the process of producing a completed breadboard circuit. At first, one of our considerations was to create a CNC wire and component placer, but time and resources were against us. Running through numerous different ideas, we finally chose to create a mechanism that “prints” wires for you. You will be able to make your circuit on your computer, upload it to our website, and your circuit wires will be cut, stripped, and bent to the correct length.
-div.well.software#1020
-    p We chose to use Fritzing as our breadboard schematic software of choice because it is open source, easy to use, and easy to access the wire data we need. Fritzing uses the .fzz file type, which is a zipped archive which contains a .fz file, which is an XML document containing all the wire geometries that we send to the Arduino to determine the length of wires to cut. 
-div.well#1024
-    p After several days, we’ve managed to create some sketch ideas for the device. Illustrated below is a CAD of a first mechanical design:
-    p Our first mechanical design was rudimentary at best. Our goal in creating it was to get an basic idea into CAD that we could critique and adapt. This design, which was excessively complex, relied on a rotating drum that, once the wire was cut, took the wire to various stations where it was stripped, bent, and then dropped into a container. After the design review, we dropped this design and started fresh.
-div.well.mechanical#1026
-    p Because the original design was dropped, we had to completely go back to the  drawing board. The key new aspect that we thought of in the second wave of ideation was performing operations on the wire before we cut it. This greatly simplified our model and allowed us to remove complex automations needed in half. 
-div.well.mechanical#1101
-    p Since our new mechanism depends substantially on an accurate feeding mechanism, this took a significant amount of design.
-    p Our first feeder design is heavily based on extruders from 3D printers. We created a casing for our stepper motor and prototyped a drive gear around the shaft. We also designed an idler which is held by a rubber band to place grip on our wire.
-    p However, this design failed because not enough speed was being applied by the stepper motor. The idler, because of its size, made it difficult to provide enough force for grip.
-div.well.mechanical#1105
-    p The second iteration is hacked together immediately after. This time it uses a pulley and an acrylic idler laced with tiny teeth. With our size increase and a transfer of tension, we fed our first successful wire.
-div.well.mechanical#1109
-    p To strip our wires, we mounted a stripper on an MDF scaffold. The lower arm of the stripper was actuated with a servo - when the servo moved, the stripper would close and open. When testing this subsystem, we found that it worked fairly well on its own, and we felt confident in our design. We did notice that wire would sometimes get caught in the teeth of the stripper, but it worked well aside from the occasional catch. Later, this catch is fixed with a rebound propping system tensioned on rubber band.
-div.well.mechanical#1115
-    p The third iteration is an encasing from what we learned in the second run. It provided better loading and stability.
-div.well.mechanical#1117
-    p Since our stripping mechanism worked fairly well, we decided to use a similar design for the cutting mechanism. We mounted a wire cutter on a scaffold and actuated its lower handle with a servo. When the servo moved, the cutter would close and open, cutting the wire. When testing this subsystem, we found that this design worked even more consistently than the stripper did - since cutter blades are considerably simpler than stripper blades, the wire never got caught on the cutter. As a result, we decided that this would be our final iteration of the cutter’s design.
-div.well.software#1120
-    p After extracting wire data from Fritzing schematics, it was a simple task to convert the wire data into lengths and send the Arduino a command containing the correct number of steps of the stepper motor to feed out the correct length wire for stripping, cutting, and bending. We also decided to add more of a software challenge and create a website, which we host on the computer connected to the Arduino. This web server allows for remote uploads of Fritzing schematics which are immediately processed and sent to the Arduino to be cut, but it only operates when the host computer is on and connected to the Arduino.
-div.well.mechanical#1126
-    p We then turned our attention to the bending subsystem. The bender subsystem worked fairly well the first time we tested it. Though the bend angle was not quite perpendicular, we were satisfied with the result, and felt that no further crucial redesign was required.
-div.well#1129
-    p After completing the bending mechanism, we put everything together, combining the feeding, stripping, cutting, and bending mechanisms. We thought this would be fairly straightforward, but we soon ran into problems. When creating the stripping mechanism, we noticed that the wire would occasionally get caught in the teeth of the wire stripper. This became a much bigger issue after assembling everything; if wire got caught in the stripper, wire would pile up in the feeder. A few minor modifications were required to prevent the wire from piling up; we used a rubber band to raise the wire out of the teeth of the stripper, and we made a small guide for the wire to prevent it from bending and piling up. Additionally, we experimented with different types of wire, and found that using thinner, more flexible wire helped alleviate this issue.
+div.panel.panel-success#1014
+    div.panel-heading [10/14/13] IDEA PROPOSALS
+    div.panel-body Our team was given the initial inspiration to create a “breadboard maker.” We aimed to produce a device that eases the process of producing a completed breadboard circuit. At first, one of our considerations was to create a CNC wire and component placer, but time and resources were against us. Running through numerous different ideas, we finally chose to create a mechanism that “prints” wires for you. You will be able to make your circuit on your computer, upload it to our website, and your circuit wires will be cut, stripped, and bent to the correct length.
+div.panel.panel-danger.software#1020
+    div.panel-heading [10/20/13] FRITZING
+    div.panel-body We chose to use Fritzing as our breadboard schematic software of choice because it is open source, easy to use, and easy to access the wire data we need. Fritzing uses the .fzz file type, which is a zipped archive which contains a .fz file, which is an XML document containing all the wire geometries that we send to the Arduino to determine the length of wires to cut. 
+div.panel.panel-success#1024
+    div.panel-heading [10/24/13] FIRST DESIGN REVIEW
+    div.panel-body After several days, we’ve managed to create some sketch ideas for the device. Illustrated below is a CAD of a first mechanical design:
+    div.panel-body Our first mechanical design was rudimentary at best. Our goal in creating it was to get an basic idea into CAD that we could critique and adapt. This design, which was excessively complex, relied on a rotating drum that, once the wire was cut, took the wire to various stations where it was stripped, bent, and then dropped into a container. After the design review, we dropped this design and started fresh.
+div.panel.panel-primary.mechanical#1026
+    div.panel-heading [10/26/13] SOLIDIFIED DESIGN DIRECTION
+    div.panel-body Because the original design was dropped, we had to completely go back to the  drawing board. The key new aspect that we thought of in the second wave of ideation was performing operations on the wire before we cut it. This greatly simplified our model and allowed us to remove complex automations needed in half. 
+div.panel.panel-primary.mechanical#1101
+    div.panel-heading [11/01/13] FEEDER V.1
+    div.panel-body Since our new mechanism depends substantially on an accurate feeding mechanism, this took a significant amount of design.
+    div.panel-body Our first feeder design is heavily based on extruders from 3D printers. We created a casing for our stepper motor and prototyped a drive gear around the shaft. We also designed an idler which is held by a rubber band to place grip on our wire.
+    div.panel-body However, this design failed because not enough speed was being applied by the stepper motor. The idler, because of its size, made it difficult to provide enough force for grip.
+div.panel.panel-primary.mechanical#1105
+    div.panel-heading [11/05/13] FEEDER V.2
+    div.panel-body The second iteration is hacked together immediately after. This time it uses a pulley and an acrylic idler laced with tiny teeth. With our size increase and a transfer of tension, we fed our first successful wire.
+div.panel.panel-primary.mechanical#1109
+    div.panel-heading [11/09/13] WIRE STRIPPER
+    div.panel-body To strip our wires, we mounted a stripper on an MDF scaffold. The lower arm of the stripper was actuated with a servo - when the servo moved, the stripper would close and open. When testing this subsystem, we found that it worked fairly well on its own, and we felt confident in our design. We did notice that wire would sometimes get caught in the teeth of the stripper, but it worked well aside from the occasional catch. Later, this catch is fixed with a rebound propping system tensioned on rubber band.
+div.panel.panel-primary.mechanical#1115
+    div.panel-heading [11/15/13] FEEDER V.3
+    div.panel-body The third iteration is an encasing from what we learned in the second run. It provided better loading and stability.
+div.panel.panel-primary.mechanical#1117
+    div.panel-heading [11/17/13] WIRE CUTTER
+    div.panel-body Since our stripping mechanism worked fairly well, we decided to use a similar design for the cutting mechanism. We mounted a wire cutter on a scaffold and actuated its lower handle with a servo. When the servo moved, the cutter would close and open, cutting the wire. When testing this subsystem, we found that this design worked even more consistently than the stripper did - since cutter blades are considerably simpler than stripper blades, the wire never got caught on the cutter. As a result, we decided that this would be our final iteration of the cutter’s design.
+div.panel.panel-danger.software#1120
+    div.panel-heading [11/20/13] LOCAL WEB SERVER
+    div.panel-body After extracting wire data from Fritzing schematics, it was a simple task to convert the wire data into lengths and send the Arduino a command containing the correct number of steps of the stepper motor to feed out the correct length wire for stripping, cutting, and bending. We also decided to add more of a software challenge and create a website, which we host on the computer connected to the Arduino. This web server allows for remote uploads of Fritzing schematics which are immediately processed and sent to the Arduino to be cut, but it only operates when the host computer is on and connected to the Arduino.
+div.panel.panel-primary.mechanical#1126
+    div.panel-heading [11/26/13] BENDER SUCCESSFUL
+    div.panel-body We then turned our attention to the bending subsystem. The bender subsystem worked fairly well the first time we tested it. Though the bend angle was not quite perpendicular, we were satisfied with the result, and felt that no further crucial redesign was required.
+div.panel.panel-success#1129
+    div.panel-heading [11/29/13] SUCCESS IN BENDING, STRIPPING, AND FEEDING
+    div.panel-body After completing the bending mechanism, we put everything together, combining the feeding, stripping, cutting, and bending mechanisms. We thought this would be fairly straightforward, but we soon ran into problems. When creating the stripping mechanism, we noticed that the wire would occasionally get caught in the teeth of the wire stripper. This became a much bigger issue after assembling everything; if wire got caught in the stripper, wire would pile up in the feeder. A few minor modifications were required to prevent the wire from piling up; we used a rubber band to raise the wire out of the teeth of the stripper, and we made a small guide for the wire to prevent it from bending and piling up. Additionally, we experimented with different types of wire, and found that using thinner, more flexible wire helped alleviate this issue.
