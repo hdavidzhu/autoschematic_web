@@ -5,7 +5,11 @@
 var request = require('request')
 
 exports.index = function(req, res){
-    res.render('index', { title: 'Express' });
+    res.redirect('info');
+};
+
+exports.info = function(req, res){
+    res.render('index', { title: 'AutoSchematic' });
 };
 
 exports.upload = function(req, res){

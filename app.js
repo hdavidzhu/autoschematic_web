@@ -30,6 +30,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/info', routes.info);
 app.get('/upload', routes.upload);
 
 http.createServer(app).listen(app.get('port'), function(){

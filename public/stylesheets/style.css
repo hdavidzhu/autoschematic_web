@@ -91,10 +91,6 @@ img {
     cursor: pointer;
 }
 
-.software_button:active {
-    opacity: 0.7;
-}
-
 .mechanical_button {
     flex: 2;
     order: 2;
