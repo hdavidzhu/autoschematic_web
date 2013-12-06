@@ -14,6 +14,8 @@ exports.upload = function(req, res){
         if (err || body=='Tunnel autoschematic.ngrok.com not found'){
             res.render('upload', { title: 'Sorry' });
         }
-        res.redirect('http://autoschematic.ngrok.com/upload')
+        console.log(body);
+        console.log(typeof(body));
+        res.redirect('http://autoschematic.ngrok.com/upload');
     });
 };
