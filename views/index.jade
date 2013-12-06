@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1 #{title}
-  p Welcome to #{title}
+    div.body
+        div#intro
+            p Have you ever wanted to make a circuit, and found yourself frustrated with the tedious process of bending, stripping, and cutting wires? Our Principles of Engineering team has a solution - upload a schematic to our server, and we'll print all your wires for you!
+            p We are AutoSchematic, and this is our product:
+        div#intro_video
+            //- | Through in our cameo video here.
+        div.design_header THE DESIGN PROCESS
+            div.mechanical_button Mechanical
+            div.software_button Software
+        div.design_process
+            include _design_process.jade
