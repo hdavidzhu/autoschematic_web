@@ -2,6 +2,11 @@ body {
     font: 18px 'Raleway', "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+video {
+    margin: 0px auto;    
+}
+
+
 a {
     color: #00B7FF;
 }

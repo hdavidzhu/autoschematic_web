@@ -8,6 +8,7 @@ div.panel.panel-success#1024
     div.panel-heading [10/24/13] FIRST DESIGN REVIEW
     div.panel-body After several days, we’ve managed to create some sketch ideas for the device. Illustrated below is a CAD of a first mechanical design:
     div.panel-body Our first mechanical design was rudimentary at best. Our goal in creating it was to get an basic idea into CAD that we could critique and adapt. This design, which was excessively complex, relied on a rotating drum that, once the wire was cut, took the wire to various stations where it was stripped, bent, and then dropped into a container. After the design review, we dropped this design and started fresh.
+        img(class='img-responsive', src='/images/OriginalCAD.JPG')
 div.panel.panel-primary.mechanical#1026
     div.panel-heading [10/26/13] SOLIDIFIED DESIGN DIRECTION
     div.panel-body Because the original design was dropped, we had to completely go back to the  drawing board. The key new aspect that we thought of in the second wave of ideation was performing operations on the wire before we cut it. This greatly simplified our model and allowed us to remove complex automations needed in half. 
@@ -19,6 +20,8 @@ div.panel.panel-primary.mechanical#1101
 div.panel.panel-primary.mechanical#1105
     div.panel-heading [11/05/13] FEEDER V.2
     div.panel-body The second iteration is hacked together immediately after. This time it uses a pulley and an acrylic idler laced with tiny teeth. With our size increase and a transfer of tension, we fed our first successful wire.
+        video.img-responsive(controls='controls')
+            source(src='/videos/Feeder 01.mp4',type='video/mp4')
 div.panel.panel-primary.mechanical#1109
     div.panel-heading [11/09/13] WIRE STRIPPER
     div.panel-body To strip our wires, we mounted a stripper on an MDF scaffold. The lower arm of the stripper was actuated with a servo - when the servo moved, the stripper would close and open. When testing this subsystem, we found that it worked fairly well on its own, and we felt confident in our design. We did notice that wire would sometimes get caught in the teeth of the stripper, but it worked well aside from the occasional catch. Later, this catch is fixed with a rebound propping system tensioned on rubber band.
@@ -37,3 +40,5 @@ div.panel.panel-primary.mechanical#1126
 div.panel.panel-success#1129
     div.panel-heading [11/29/13] SUCCESS IN BENDING, STRIPPING, AND FEEDING
     div.panel-body After completing the bending mechanism, we put everything together, combining the feeding, stripping, cutting, and bending mechanisms. We thought this would be fairly straightforward, but we soon ran into problems. When creating the stripping mechanism, we noticed that the wire would occasionally get caught in the teeth of the wire stripper. This became a much bigger issue after assembling everything; if wire got caught in the stripper, wire would pile up in the feeder. A few minor modifications were required to prevent the wire from piling up; we used a rubber band to raise the wire out of the teeth of the stripper, and we made a small guide for the wire to prevent it from bending and piling up. Additionally, we experimented with different types of wire, and found that using thinner, more flexible wire helped alleviate this issue.
+        video.img-responsive(controls='controls')
+            source(src='/videos/Feeder Stripper 01.mp4',type='video/mp4')
