@@ -6,6 +6,10 @@ video {
     margin: 0px auto;    
 }
 
+.center-block{
+    margin: 0px auto;
+    display: block;
+}
 
 a {
     color: #00B7FF;

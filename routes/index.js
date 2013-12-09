@@ -12,6 +12,10 @@ exports.info = function(req, res){
     res.render('index', { title: 'AutoSchematic' });
 };
 
+exports.team = function(req, res){
+    res.render('team', {title:'AutoSchematic Team'});
+};
+
 exports.upload = function(req, res){
     var url = 'http://autoschematic.ngrok.com/upload'
     request(url, function(err, resp, body){
