@@ -1,0 +1,19 @@
+div(class='carousel slide carousel-fixed', id='carousel', data-ride='carousel')
+    ol(class='carousel-indicators')
+        li(data-target='#carousel', data-slide-to='0', class='active')
+        li(data-target='#carousel', data-slide-to='1', class='')
+        li(data-target='#carousel', data-slide-to='2', class='')
+    div(class='carousel-inner carousel-fixed')
+        div(class='item active carousel-fixed')
+            img(src='http://placekitten.com/400/200',class='img-carousel')
+            div(class='carousel-caption') Kitten
+        div(class='item carousel-fixed')
+            img(src='http://placekitten.com/600/500',class='img-carousel')
+            div(class='carousel-caption') Cute Kitten
+        div(class='item carousel-fixed')
+            img(src='http://placekitten.com/800/400',class='img-carousel')
+            div(class='carousel-caption') Cutest Kitten
+    a(class='left carousel-control', href='#carousel', data-slide='prev')
+        span(class='glyphicon glyphicon-chevron-left')
+    a(class='right carousel-control', href='#carousel', data-slide='next')
+        span(class='glyphicon glyphicon-chevron-right')

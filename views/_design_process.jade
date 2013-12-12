@@ -17,6 +17,10 @@ div.panel.panel-primary.mechanical#1101
     div.panel-body Since our new mechanism depends substantially on an accurate feeding mechanism, this took a significant amount of design.
     div.panel-body Our first feeder design is heavily based on extruders from 3D printers. We created a casing for our stepper motor and prototyped a drive gear around the shaft. We also designed an idler which is held by a rubber band to place grip on our wire.
     div.panel-body However, this design failed because not enough speed was being applied by the stepper motor. The idler, because of its size, made it difficult to provide enough force for grip.
+div.panel.panel-danger.software#1102
+    div.panel-heading [11/02/13] ARDUINO CODE
+    div.panel-body After extracting wire data from Fritzing schematics, it was a simple task to convert the wire data into lengths and send the Arduino a command containing the correct number of steps of the stepper motor to feed out the correct length wire for stripping, cutting, and bending. Our protocol sends one command at a time over the serial port and waits for a response from the arduino before sending the next command.
+    div.panel-body The arduino then extracts the data sent over the serial port and actuates the motors to perform the correct sequence of stripping, bending, and cutting for that length wire.
 div.panel.panel-primary.mechanical#1105
     div.panel-heading [11/05/13] FEEDER V.2
     div.panel-body The second iteration is hacked together immediately after. This time it uses a pulley and an acrylic idler laced with tiny teeth. With our size increase and a transfer of tension, we fed our first successful wire.
@@ -33,7 +37,7 @@ div.panel.panel-primary.mechanical#1117
     div.panel-body Since our stripping mechanism worked fairly well, we decided to use a similar design for the cutting mechanism. We mounted a wire cutter on a scaffold and actuated its lower handle with a servo. When the servo moved, the cutter would close and open, cutting the wire. When testing this subsystem, we found that this design worked even more consistently than the stripper did - since cutter blades are considerably simpler than stripper blades, the wire never got caught on the cutter. As a result, we decided that this would be our final iteration of the cutter’s design.
 div.panel.panel-danger.software#1120
     div.panel-heading [11/20/13] LOCAL WEB SERVER
-    div.panel-body After extracting wire data from Fritzing schematics, it was a simple task to convert the wire data into lengths and send the Arduino a command containing the correct number of steps of the stepper motor to feed out the correct length wire for stripping, cutting, and bending. We also decided to add more of a software challenge and create a website, which we host on the computer connected to the Arduino. This web server allows for remote uploads of Fritzing schematics which are immediately processed and sent to the Arduino to be cut, but it only operates when the host computer is on and connected to the Arduino.
+    div.panel-body We decided to add more of a software challenge and create a website, which we host on the computer connected to the Arduino. This web server allows for remote uploads of Fritzing schematics which are immediately processed and sent to the Arduino to be cut, but it only operates when the host computer is on and connected to the Arduino.
 div.panel.panel-primary.mechanical#1126
     div.panel-heading [11/26/13] BENDER SUCCESSFUL
     div.panel-body We then turned our attention to the bending subsystem. The bender subsystem worked fairly well the first time we tested it. Though the bend angle was not quite perpendicular, we were satisfied with the result, and felt that no further crucial redesign was required.
