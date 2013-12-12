@@ -38,6 +38,10 @@ img {
     margin-top: 20px;
 }
 
+.bio {
+    margin-top: 20px;
+}
+
 .carousel {
     width: 75%;
     margin: 0px auto;
@@ -155,9 +159,14 @@ img {
     margin-right: auto;
     margin-left: auto;
     font-size: 18px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+.bio-pic {
+    width: 100%;
+    margin-top: 0px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -167,6 +176,20 @@ img {
 
     .mechanical_button {
         flex: 3;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bio-pic {
+        width: 30%;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: @screen-sm-max) {
+    .bio-pic {
+        width: 50%;
+        margin-top: 0px;
     }
 }
 
