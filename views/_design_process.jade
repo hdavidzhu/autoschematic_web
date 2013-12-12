@@ -1,10 +1,10 @@
-div.panel.panel-success#1014
+div.panel.panel-success.general#1014
     div.panel-heading [10/14/13] IDEA PROPOSALS
     div.panel-body Our team was given the initial inspiration to create a “breadboard maker.” We aimed to produce a device that eases the process of producing a completed breadboard circuit. At first, one of our considerations was to create a CNC wire and component placer, but time and resources were against us. Running through numerous different ideas, we finally chose to create a mechanism that “prints” wires for you. You will be able to make your circuit on your computer, upload it to our website, and your circuit wires will be cut, stripped, and bent to the correct length.
 div.panel.panel-danger.software#1020
     div.panel-heading [10/20/13] FRITZING
     div.panel-body We chose to use Fritzing as our breadboard schematic software of choice because it is open source, easy to use, and easy to access the wire data we need. Fritzing uses the .fzz file type, which is a zipped archive which contains a .fz file, which is an XML document containing all the wire geometries that we send to the Arduino to determine the length of wires to cut. 
-div.panel.panel-success#1024
+div.panel.panel-success.general#1024
     div.panel-heading [10/24/13] FIRST DESIGN REVIEW
     div.panel-body After several days, we’ve managed to create some sketch ideas for the device. Illustrated below is a CAD of a first mechanical design:
     div.panel-body Our first mechanical design was rudimentary at best. Our goal in creating it was to get an basic idea into CAD that we could critique and adapt. This design, which was excessively complex, relied on a rotating drum that, once the wire was cut, took the wire to various stations where it was stripped, bent, and then dropped into a container. After the design review, we dropped this design and started fresh.
@@ -41,7 +41,7 @@ div.panel.panel-danger.software#1120
 div.panel.panel-primary.mechanical#1126
     div.panel-heading [11/26/13] BENDER SUCCESSFUL
     div.panel-body We then turned our attention to the bending subsystem. The bender subsystem worked fairly well the first time we tested it. Though the bend angle was not quite perpendicular, we were satisfied with the result, and felt that no further crucial redesign was required.
-div.panel.panel-success#1129
+div.panel.panel-success.general#1129
     div.panel-heading [11/29/13] SUCCESS IN BENDING, STRIPPING, AND FEEDING
     div.panel-body After completing the bending mechanism, we put everything together, combining the feeding, stripping, cutting, and bending mechanisms. We thought this would be fairly straightforward, but we soon ran into problems. When creating the stripping mechanism, we noticed that the wire would occasionally get caught in the teeth of the wire stripper. This became a much bigger issue after assembling everything; if wire got caught in the stripper, wire would pile up in the feeder. A few minor modifications were required to prevent the wire from piling up; we used a rubber band to raise the wire out of the teeth of the stripper, and we made a small guide for the wire to prevent it from bending and piling up. Additionally, we experimented with different types of wire, and found that using thinner, more flexible wire helped alleviate this issue.
         video.img-responsive(controls='controls')
