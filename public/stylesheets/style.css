@@ -101,7 +101,7 @@ img {
 
 .software_button {
     flex: 2;
-    order: 1;
+    order: 3;
     float: right;
     /*padding: 10%;*/
     background-color: #FF0039;
@@ -177,6 +177,9 @@ img {
     .mechanical_button {
         flex: 3;
     }
+    .general_button {
+        flex: 3;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -205,6 +208,10 @@ img {
     }
 
     .mechanical_button {
+        flex: 3.5;
+    }
+
+    .general_button {
         flex: 3.5;
     }
 }
