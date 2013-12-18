@@ -36,9 +36,12 @@ div.panel.panel-primary.mechanical#1109
 div.panel.panel-primary.mechanical#1115
     div.panel-heading [11/15/13] FEEDER V.3
     div.panel-body The third iteration is an encasing from what we learned in the second run. It provided better loading and stability.
+        img(class='img-responsive', src='/images/Feeder.png')
 div.panel.panel-primary.mechanical#1117
     div.panel-heading [11/17/13] WIRE CUTTER
     div.panel-body Since our stripping mechanism worked fairly well, we decided to use a similar design for the cutting mechanism. We mounted a wire cutter on a scaffold and actuated its lower handle with a servo. When the servo moved, the cutter would close and open, cutting the wire. When testing this subsystem, we found that this design worked even more consistently than the stripper did - since cutter blades are considerably simpler than stripper blades, the wire never got caught on the cutter. As a result, we decided that this would be our final iteration of the cutter’s design.
+        img(class='img-responsive col-xs-6', src='/images/Cutter.png')
+        img(class='img-responsive col-xs-6', src='/images/Cutter 2.png')
 div.panel.panel-danger.software#1120
     div.panel-heading [11/20/13] LOCAL WEB SERVER
     div.panel-body We decided to add more of a software challenge and create a website, which we host on the computer connected to the Arduino. This web server allows for remote uploads of Fritzing schematics which are immediately processed and sent to the Arduino to be cut, but it only operates when the host computer is on and connected to the Arduino.
