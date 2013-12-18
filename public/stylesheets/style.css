@@ -19,6 +19,10 @@ a {
     width: 100%
 }
 
+.img-responsive{
+    max-height: 400px;
+}
+
 .nav-logo {
   height: 0px;
   padding: 0px;

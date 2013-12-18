@@ -17,6 +17,8 @@ div.panel.panel-primary.mechanical#1101
     div.panel-body Since our new mechanism depends substantially on an accurate feeding mechanism, this took a significant amount of design.
     div.panel-body Our first feeder design is heavily based on extruders from 3D printers. We created a casing for our stepper motor and prototyped a drive gear around the shaft. We also designed an idler which is held by a rubber band to place grip on our wire.
     div.panel-body However, this design failed because not enough speed was being applied by the stepper motor. The idler, because of its size, made it difficult to provide enough force for grip.
+        img(class='img-responsive col-xs-6', src='/images/Feeder 0.png')
+        img(class='img-responsive col-xs-6', src='/images/Feeder V1.png')
 div.panel.panel-danger.software#1102
     div.panel-heading [11/02/13] ARDUINO CODE
     div.panel-body After extracting wire data from Fritzing schematics, it was a simple task to convert the wire data into lengths and send the Arduino a command containing the correct number of steps of the stepper motor to feed out the correct length wire for stripping, cutting, and bending. Our protocol sends one command at a time over the serial port and waits for a response from the arduino before sending the next command.
@@ -29,6 +31,8 @@ div.panel.panel-primary.mechanical#1105
 div.panel.panel-primary.mechanical#1109
     div.panel-heading [11/09/13] WIRE STRIPPER
     div.panel-body To strip our wires, we mounted a stripper on an MDF scaffold. The lower arm of the stripper was actuated with a servo - when the servo moved, the stripper would close and open. When testing this subsystem, we found that it worked fairly well on its own, and we felt confident in our design. We did notice that wire would sometimes get caught in the teeth of the stripper, but it worked well aside from the occasional catch. Later, this catch is fixed with a rebound propping system tensioned on rubber band.
+        img(class='img-responsive col-xs-6', src='/images/Stripper 1.png')
+        img(class='img-responsive col-xs-6', src='/images/Stripper 2.png')
 div.panel.panel-primary.mechanical#1115
     div.panel-heading [11/15/13] FEEDER V.3
     div.panel-body The third iteration is an encasing from what we learned in the second run. It provided better loading and stability.
