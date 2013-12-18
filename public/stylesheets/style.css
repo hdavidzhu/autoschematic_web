@@ -7,6 +7,12 @@ video {
     margin: 0px auto;    
 }
 
+iframe {
+    margin: 0px auto;
+    display: block;
+    padding-top: 15px;
+}
+
 .center-block{
     margin: 0px auto;
     display: block;
