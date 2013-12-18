@@ -21,6 +21,12 @@ a {
 
 .img-responsive{
     max-height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.panel-vid{
+    padding-top: 15px;
 }
 
 .nav-logo {
@@ -151,7 +157,7 @@ img {
 
 }
 
-.active {
+.button-select.active {
     opacity: 0.7;
 }
 
